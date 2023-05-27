@@ -31,11 +31,11 @@ for i = 1:N-1
     y6 = y_IP(:,i,j)*(1+0.01*h);
     while norm(y3-y4)>1e-8 && norm(y5-y6)>1e-8 && norm(y1-y2)>1e-8 
         y1 = y2;
-        y2 = EP_phi(y1,y_EP(:,i,j),stepsize);
+        y2 = Energypreserving_phi(y1,y_EP(:,i,j),stepsize);
         y3 = y4;
-        y4 = Mid_Fun(y3,y_Mid(:,i,j),stepsize);
+        y4 = Midpoint_fun(y3,y_Mid(:,i,j),stepsize);
         y5 = y6;
-        y6 = IP_phi(y5,y_IP(:,i,j),stepsize);
+        y6 = NewMethod_phi(y5,y_IP(:,i,j),stepsize);
 %         y6 = Testf(y5,y_T(:,i,j),stepsize);
     end
     y_EP(:,i+1,j) = y2;

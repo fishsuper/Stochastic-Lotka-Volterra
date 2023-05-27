@@ -1,3 +1,6 @@
+%%%%%% Wang YC 2020-04-20
+%%%%%% solving the stochastic Lotka-Volterra systems via symplectic method
+
 %% inatial paremeter-values of the equation
 a = -2; b = -1; c = 0.5;
 d = -0.5; gamma = 1; mu = 2;

@@ -31,7 +31,7 @@ for i = 1:N-1
     y6 = y_IP(:,i,j)*(1+0.01*h);
     while norm(y3-y4)>1e-8 && norm(y5-y6)>1e-8 && norm(y1-y2)>1e-8 
         y1 = y2;
-        y2 = Energypreserving_phi(y1,y_EP(:,i,j),stepsize);
+        y2 = EnergyPreserving_phi(y1,y_EP(:,i,j),stepsize);
         y3 = y4;
         y4 = Midpoint_fun(y3,y_Mid(:,i,j),stepsize);
         y5 = y6;

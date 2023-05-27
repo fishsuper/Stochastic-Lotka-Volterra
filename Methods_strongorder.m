@@ -3,17 +3,17 @@ a = -0.6; b = -1; c = 0;
 d = -0.5; gamma = 1; mu = 2;
 y0 = [2.0;0.9;1.5];
 
-%% setting attributes of the numerical scheme
+%% settings of the numerical schemes
 T = 1; N = 2^12; 
 dt = T/N; M = 1000;
 R0 = 2*[1; 2; 4; 8; 16];
-y_EP = repmat(y0,1,M);
-Y_EP = zeros(3,M,5);
-y_EM = repmat(y0,1,M);
+y_EP = repmat(y0,1,M);  % Energy-preserving solution
+Y_EP = zeros(3,M,5);    
+y_EM = repmat(y0,1,M);  % Euler-Maruyama solution
 Y_EM = zeros(3,M,5);
 
-y_Mid = repmat(y0,1,M);   %% 3*M Matrix  
-y_IP = repmat(y0,1,M);
+y_Mid = repmat(y0,1,M); % Midpoint scheme solution
+y_IP = repmat(y0,1,M);  % solution of our algorithm
 Y_IP = zeros(3,M,5);
 % M sample paths and N small intervals
 normal = randn(M,N);

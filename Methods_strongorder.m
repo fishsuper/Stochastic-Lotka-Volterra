@@ -72,6 +72,7 @@ for p = 1:5
                 y6 = xx + EBGH*(Dt+c*DetaW(i));
             end
             y_IP(:,i) = y4;
+            y_EP(:,i) = y6;
         end
     end
     Y_IP(:,:,p) = y_IP;

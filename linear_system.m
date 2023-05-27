@@ -1,3 +1,4 @@
+% compute a linear system using midpoint method
 global B H1 H2
 B = [0 1 -1; -1 0 3; 1 -3 0];
 H1 = [2 1 1; 1 1 0; 1 0 1];

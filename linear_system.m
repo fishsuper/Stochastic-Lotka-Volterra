@@ -18,7 +18,7 @@ for i = 1:N-1
     y2 = y_mid(:,i,j)*(1+h); 
     while norm(y1-y2)>1e-8 
         y1 = y2;
-        y2 = midfunction(y1,y_mid(:,i,j),h,dW_hat(i,j));
+        y2 = linear_midfun(y1,y_mid(:,i,j),h,dW_hat(i,j));
     end
     y_mid(:,i+1,j) = y2;
 end

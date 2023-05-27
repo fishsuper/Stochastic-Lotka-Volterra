@@ -26,7 +26,7 @@ end
 s = -log(y0(1))/d - b*log(y0(2)) + log(y0(3));
 for p = 1:5
     p_Sym(:) = log(y0(1));
-    q_Sym(:) = -log(y0(2))/d; % Ã¿´ÎÑ­»·¶¼Ðè³õÊ¼»¯ 
+    q_Sym(:) = -log(y0(2))/d; % æ¯æ¬¡å¾ªçŽ¯éƒ½éœ€åˆå§‹åŒ– 
     R = R0(p); 
     Dt = R*dt; 
     L = N/R;
@@ -35,7 +35,7 @@ for p = 1:5
         DetaW = sum(dW(:,(j-1)*R+1:j*R),2);
 %         DetaW(DetaW>A) = A; DetaW(DetaW<-A) = -A;
         for i = 1:M
-            g = @(p)Sym_P(a, b, d, s, p, q_Sym(i), gamma, mu, p_Sym(i), Dt, DetaW(i), c); % ¹ØÓÚpµÄº¯Êý£¬½âp
+            g = @(p)Sym_P(a, b, d, s, p, q_Sym(i), gamma, mu, p_Sym(i), Dt, DetaW(i), c); % å…³äºŽpçš„å‡½æ•°ï¼Œè§£p
             p_Sym(i) = fsolve(g,p_Sym(i));
             q_Sym(i) = Sym_Q(a, b, d, s, p_Sym(i), q_Sym(i), gamma, mu, Dt, DetaW(i), c);
         end

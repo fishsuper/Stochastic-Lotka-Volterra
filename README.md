@@ -12,3 +12,5 @@ H(\boldsymbol{y}) & =\sum_{i=1}^m \beta_i y^i-p_i \ln y^i
 \end{aligned}
 $$
 The numerical experiments are prefromed by Matlab. OurMethods.m presents the efficiency, StrongOrder.m tests the strong order of these methods.
+\\
+Find more details on https://doc.global-sci.org/uploads/Issue/IJNAM/v19n2/192_194.pdf?code=dj8Q%2BbIW2Dm8Te%2BcLnKf4g%3D%3D
